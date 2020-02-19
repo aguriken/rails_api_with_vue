@@ -1,0 +1,65 @@
+openapi: 3.0.0
+info:
+  title: rails_api_with_vue
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:3000/api/v1'
+paths:
+  '/messages/{id}':
+    get:
+      summary: Your GET endpoint
+      tags:
+        - Message
+      responses: {}
+      operationId: 'get-messages-:id'
+      description: 特定のメッセージを一つ取得するAPI
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            examples:
+              example-1:
+                value:
+                  data:
+                    id: '1'
+                    type: message
+                    attributes:
+                      title: 今日の朝食
+                      content: 朝食は何も食べていません
+        description: ''
+  /messages:
+    get:
+      summary: Your GET endpoint
+      tags:
+        - Message
+      operationId: get-messages
+      description: メッセージ一覧を取得するAPI
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            examples:
+              example-1:
+                value:
+                  data:
+                    - id: '1'
+                      type: message
+                      attributes:
+                        title: 今日の朝食
+                        content: 朝食は何も食べていません
+                    - id: '2'
+                      type: message
+                      attributes:
+                        title: 今日の昼食
+                        content: 唐揚げ定食
+                    - id: '3'
+                      type: message
+                      attributes:
+                        title: 今日の夕食
+                        content: カレーかな？
+components:
+  schemas: {}
