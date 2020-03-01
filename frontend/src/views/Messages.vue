@@ -1,5 +1,5 @@
 <template>
   <div>
-    <router-view></router-view>
+    <h2>Messages Index</h2>
   </div>
 </template>
