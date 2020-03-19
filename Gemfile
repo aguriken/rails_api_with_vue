@@ -7,7 +7,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'dotenv-rails'
 gem 'fast_jsonapi'
 gem 'mysql2', '>= 0.4.4'
-gem 'puma', '~> 3.11'
+gem 'puma', '>= 3.12.4'
 gem 'rack-cors'
 gem 'rails', '~> 6.0.0'
 
