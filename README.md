@@ -11,6 +11,12 @@ Things you may want to cover:
 
 * Database: Mysql version 5.6
 
-* How to run the test suite
+* How to run frontend server 
+
+```
+cd frontend
+
+npm run serve
+```
 
 * ...
