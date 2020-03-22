@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Messages from "./views/Messages";
-import MessagesDetail from "./views/MessagesDetail";
+import MessageDetail from "./views/MessageDetail";
+import MessageNew from "./views/MessageNew";
 
 Vue.use(Router)
 
@@ -14,7 +15,13 @@ export default new Router({
     },
     { 
       path: '/messages/:id', 
-      component: MessagesDetail
+      name: 'messageDetail',
+      component: MessageDetail
+    },
+    {
+      path: '/messages/new',
+      name: 'messageNew',
+      component: MessageNew
     }
   ]
 })
