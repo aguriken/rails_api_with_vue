@@ -30,7 +30,7 @@ export default {
   },
   created() {
     const messageId = this.$router.currentRoute.params.id
-    axios.get(`http://localhost:3000/api/v1/messages/${messageId}`).then((response) => {
+    axios.get(`messages/${messageId}`).then((response) => {
       const message = response.data.data
       this.title = message.attributes.title
       this.content = message.attributes.content
@@ -41,7 +41,7 @@ export default {
   methods: {
     messageUpdate() {
       const messageId = this.$router.currentRoute.params.id
-      axios.put(`http://localhost:3000/api/v1/messages/${messageId}`, {
+      axios.put(`/messages/${messageId}`, {
         title: this.title,
         content: this.content
       }).then((response) => {
@@ -53,7 +53,7 @@ export default {
     },
     messageDelete() {
       const messageId = this.$router.currentRoute.params.id
-      axios.delete(`http://localhost:3000/api/v1/messages/${messageId}`).then((response) => {
+      axios.delete(`/messages/${messageId}`).then((response) => {
         console.log(response)
         this.$router.push('/')
       }).catch((error) => {
