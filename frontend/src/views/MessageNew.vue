@@ -27,7 +27,7 @@ export default {
   }),
   methods: {
     messagePost() {
-      axios.post("http://localhost:3000/api/v1/messages", {
+      axios.post("/messages", {
         title: this.title,
         content: this.content
       }).then((response) => {       
